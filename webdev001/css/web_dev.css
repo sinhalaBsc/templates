@@ -1,0 +1,317 @@
+
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 250ms;
+}
+
+body{
+  margin:0;
+  font-family: 'Raleway',sans-serif;
+  text-align: center;
+}
+img{
+  max-width:100%;
+  height: auto;
+}
+.container{
+  width: 95%;
+  margin: 0 auto;
+  max-width: 70em;
+}
+.clearfix::after,
+section::after,
+footer::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* column system---------------------------------------------- */
+[class^=col-]{
+  float:left;
+  padding: 0 0.5em;
+  width: 100%;
+}
+
+.col-1{
+  width:33.33334%;
+  float:left;
+}
+
+
+
+@media (min-width: 40rem) {
+
+  [class^=col-]:first-child{
+    padding-left: 0;
+  }
+  [class^=col-]:last-child{
+    padding-right: 0 ;
+  }
+
+.col-3{
+  width: 50%;
+
+}
+.col-1{
+  width: 16.6666%;
+
+}
+
+}
+
+/* typography ----------------------------------------------- */
+
+h1{
+  font-weight: 300;
+  font-size: 1.5rem;
+  margin: 0;
+
+}
+
+.title{
+  font-size: 2.5rem;
+  margin-bottom: 1.5em;
+  font-weight: 900;
+  margin-top: 1em;
+}
+.title span{
+  font-size: 0.9em;
+  font-weight: 300;
+  display: block;
+}
+
+@media (min-width:60rem) {
+  .title{
+    font-size: 3.7rem;
+  }
+  .logo{
+    float: left;
+  }
+  nav{
+    float: right;
+  }
+
+}
+
+.button{
+  display: inline-block;
+  font-size: 1.15rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-width: 2px;
+  border-style: solid;
+  padding:0.5em 1.75em;
+}
+
+.button-small{
+  font-size:0.7rem;
+  font-weight: 700;
+}
+
+.button-accent{
+  color:#00ff6c;
+  /*border-color:#00ff6c; */
+}
+
+.button-accent:hover,
+.button-accent:focus{
+  background: #00ff6c;
+  color:#232323;
+}
+
+.button-dark{
+  color:#232323;
+  border-color:#232323;
+}
+
+.button-dark:hover,
+.button-dark:focus{
+  background: #232323;
+  color:#00ff6c;
+}
+
+
+
+
+/* header ----------------------------------------------- */
+header{
+  position: absolute;
+  left:0;
+  right: 0;
+  margin: 1em;
+}
+
+nav ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li{
+  display: inline-block;
+  margin: 1em;
+}
+
+nav a{
+  font-weight:900;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  padding: .5em;
+  color:#FFF;
+  /*background: pink;*/
+
+}
+
+nav a:hover,
+nav a:focus{
+  color:#DDD;
+
+}
+
+/* home home-hero--------------------------------------- */
+
+.home-hero{
+  background-image: url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 10em 0;
+  color:#FFF;
+}
+
+@media (min-width:60rem) {
+
+  .home-hero{
+    padding-top: 35vh;
+    height:100vh;
+  }
+}
+
+
+.home-about-textbox{
+ background-color: #232323;
+ padding: 3em;
+ width:100vw;
+ margin-left: -2.5%;
+ outline: 2px solid #00ff6c;
+ outline-offset: -2.5em;
+ color:#FFF;
+ position:relative;
+}
+
+.home-about-textbox h1{
+ color:#00ff6c;
+ position: absolute;
+ padding: 0 0.25em;
+ top:.9em;
+ left: 50%;
+ transform: translateX(-50%);
+ background-color:#232323;
+
+}
+
+@media (min-width:30rem) {
+  h1{
+    font-size: 2rem;
+  }
+
+  .home-about-textbox h1{
+   top:0.3em;
+   padding: 0.2em ;
+
+  }
+}
+
+@media (min-width:60rem) {
+  h1{
+    font-size: 2.5rem;
+  }
+  .home-about{
+   background-image: url(../img/who-we-are.jpg);
+   background-repeat: no-repeat;
+   padding-bottom: 10em;
+  }
+
+  .home-about-textbox{
+   width:50%;
+   padding: 5em;
+   margin-left: -2.5%;
+   outline-offset: -2.75em;
+   top: -4em;
+   text-align: left;
+   box-shadow: 0 0 3em 0 rgba(0,0,0,0.3);
+  }
+
+  .home-about-textbox h1{
+   top:0.4em;
+   left: 5.25rem;
+   transform: translateX(0);
+
+  }
+
+
+}
+
+/* portfolio -------------------------------------------------*/
+.portfolio{
+  margin: 3em 0;
+}
+
+.port-item{
+  margin: 0;
+  position: relative;
+}
+.port-item img{
+  display: block;
+}
+
+.port-desc{
+  position: absolute;
+  bottom:1em;
+  left: 0em;
+  right: 0em;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding-bottom: 1em;
+  padding-top: 0.5em;
+  max-width: 615px;
+
+
+}
+
+@media (min-width:30rem) {
+  .port-item{
+    width:50%;
+    float: left;
+  }
+}
+@media (min-width:60rem) {
+  .port-item{
+    width:33.3333334%;
+    overflow:hidden;
+  }
+  .port-desc{
+    transform: translateY(150%);
+  }
+  .port-item:hover .port-desc{
+    transform: translateY(0%);
+  }
+}
+
+.cta{
+  background-color: #00ff6c;
+  padding:3em 0;
+}
+
+footer{
+  background: #232323;
+  color: #fff;
+  text-align: left;
+  padding: 5em 0;
+}
+
+.unstyled-list{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
